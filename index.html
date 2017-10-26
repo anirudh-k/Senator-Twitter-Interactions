@@ -44,6 +44,18 @@
           .enter().append("circle")
           .attr("r", 5)
           .attr("fill", function(d) {
+            switch(d.group) {
+              case 1:
+                return "blue";
+              case 2:
+                return "red";
+              case 3:
+                return "maroon";
+              case 4:
+                return "lightskyblue";
+              default:
+                return "gray";
+            }
             if (d.group == 1) {
               return "blue";
             } else {
