@@ -34,7 +34,7 @@
           .data(graph.links)
           .enter().append("line")
           .attr("stroke-width", function(d) {
-            return Math.sqrt(d.value);
+            return 0.5;
           });
 
         var node = svg.append("g")
