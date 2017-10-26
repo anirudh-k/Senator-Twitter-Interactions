@@ -18,8 +18,6 @@
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
-  var color = d3.scaleOrdinal([d3.schemeCategory10);
-
       var simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(function(d) {
           return d.id;
@@ -46,11 +44,12 @@
           .enter().append("circle")
           .attr("r", 5)
           .attr("fill", function(d) {
-            if d.group == 1 {
-              return "blue";
-            } else {
-              return "red"
-            }
+            // if d.group == 1 {
+            //   return "blue";
+            // } else {
+            //   return "red"
+            // }
+            return "gray"
           })
           .call(d3.drag()
             .on("start", dragstarted)
