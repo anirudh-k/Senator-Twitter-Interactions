@@ -44,12 +44,11 @@
           .enter().append("circle")
           .attr("r", 5)
           .attr("fill", function(d) {
-            // if d.group == 1 {
-            //   return "blue";
-            // } else {
-            //   return "red"
-            // }
-            return "gray"
+            if d.group == 1 {
+              return "blue";
+            } else {
+              return "red";
+            }
           })
           .call(d3.drag()
             .on("start", dragstarted)
